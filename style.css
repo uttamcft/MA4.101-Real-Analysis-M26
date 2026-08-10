@@ -1,0 +1,178 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Forum', serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.banner {
+  background-color: #136782;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between columns */
+  margin: 20px; /* space outside the entire layout */
+}
+
+.left-column {
+  flex: 0 0 68%;
+  background-color: #fef9fc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-column {
+  flex: 0 0 30%;
+  background-color: #fef9fc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.full-width {
+  background-color: #fefaf9;
+  padding: 20px;
+  margin: 0 20px 20px 20px; /* match spacing from sides and below */
+}
+
+
+.collapsible-text {
+  font-family: 'Forum', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* or however many lines you want */
+}
+
+.non-collapsible-text {
+  font-family: 'Forum', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+
+.info-entry {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* Schedule Table Styling */
+.schedule-table {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+}
+
+.schedule-table td {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.schedule-table td.center-text {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.schedule-table th {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.custom-colored-row td:nth-child(n+2) {
+    background-color: #fcf0f3;
+}
+
+.custom-colored-row .highlight-cell {
+    background-color: #fcf0f3;
+}
+
+/* Link Pill Styling */
+a.pill {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 2px 2px 2px 0;
+    background: #e6f0fa;
+    color: #0066cc;
+    border: 1px solid #cce;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+a.pill:hover {
+    background: #d0e6f7;
+}
+
+/* Badge Styling */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #666;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+
+.light-bg {
+    background-color: #f5f4ee;
+}
+
+.alt-bg {
+    background-color: #f5f4ee;
+}
+
+
+.text-red {
+    color: red;
+}
