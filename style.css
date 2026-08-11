@@ -176,3 +176,33 @@ a.pill:hover {
 .text-red {
     color: red;
 }
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: 'Forum', serif;
+  font-size: 1.2rem;
+  transition: text-decoration 0.3s ease;
+  }
+
+   nav a:hover {
+  text-decoration: underline;
+  }
+
+
+     .no-underline-link {
+      text-decoration: none;
+      color: #0000EE; /* Blue color for links */
+      font-weight: normal;
+    }
+
+    .no-underline-link:hover {
+      text-decoration: underline;
+    }
+
+    .highlight-cyan {
+      color: #f182b9;
+      font-weight: normal;
+    }
