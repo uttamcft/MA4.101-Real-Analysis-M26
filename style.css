@@ -199,7 +199,8 @@ nav a {
     }
 
     .no-underline-link:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: #f182b9;
     }
 
     .highlight-cyan {
