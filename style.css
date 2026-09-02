@@ -124,16 +124,45 @@ button:hover {
     color: #333;
 }
 
-.schedule-table tbody tr:nth-child(even) {
-    background: #f9f9f9;
+/* ---- Row colours -------------------------------------------------------
+   Every row carries two custom properties:
+     --zebra   the alternating stripe; the week-number column always uses it
+     --row-bg  the colour the rest of the cells in that row use
+   Cells read those variables, so a single cell can override its own colour
+   without any selector-specificity fight.
+------------------------------------------------------------------------ */
+
+.schedule-table tbody tr {
+    --zebra: #ffffff;
+    --row-bg: var(--zebra);
 }
 
-.custom-colored-row td:nth-child(n+2) {
-    background-color: #fcf0f3;
+/* Stripe the ordinary rows only. Holiday/quiz/exam rows are left out of the
+   count, so inserting one doesn't flip the alternation of everything below. */
+.schedule-table tbody tr:nth-child(even of :not(.holiday):not(.quiz):not(.exam)) {
+    --zebra: #f9f9f9;
 }
 
-.custom-colored-row .highlight-cell {
-    background-color: #e7f7cd;
+/* Special rows — each one controlled on its own line */
+.schedule-table tbody tr.holiday { --row-bg: #fcf0f3; }  /* no class / holiday */
+.schedule-table tbody tr.quiz    { --row-bg: #eaf1fb; }  /* quizzes            */
+.schedule-table tbody tr.exam    { --row-bg: #fdf1e3; }  /* mid sem / end sem  */
+
+/* Paint the cells */
+.schedule-table tbody td {
+    background-color: var(--row-bg);
+}
+
+/* The week-number cell spans two rows, so it keeps the plain stripe rather
+   than taking a special row's colour. (It is the only cell with rowspan.) */
+.schedule-table tbody td[rowspan] {
+    background-color: var(--zebra);
+}
+
+/* Per-cell override — works in any column, on any row, always wins */
+.schedule-table td.highlight-cell {
+    --row-bg: #e7f7cd;
+    --zebra: #e7f7cd;
 }
 
 /* Link Pill Styling */
